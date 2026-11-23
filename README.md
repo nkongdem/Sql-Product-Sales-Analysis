@@ -1,77 +1,78 @@
-# Sql-Product-Sales-Analysis
-This project performs an in-depth SQL-based analysis of a product sales dataset using the Chinook relational database (available on Kaggle). The goal was to analyze transactional sales data stored across multiple related tables and extract meaningful business insights using structured SQL queries.
+# SQL Product Sales Analysis
 
-By applying JOINs, aggregations, window functions, and business logic, the project demonstrates how raw relational data can be transformed into actionable insights for decision-making.
+**Repository:** [github.com/nkongdem/Sql-Product-Sales-Analysis](https://github.com/nkongdem/Sql-Product-Sales-Analysis)
 
-🎯 Objectives
+An in-depth SQL analysis of the Chinook digital music store database, turning relational sales data into revenue, product, and regional performance insights using joins, aggregations, and window functions.
+
+## Results
+
+**Total sales by country**
+
+![Sales by country](charts/chart_1.png)
+
+**Top-selling tracks**
+
+![Top-selling tracks](charts/chart_2.png)
+
+**Revenue by region**
+
+![Revenue by region](charts/chart_3.png)
+
+**Monthly sales performance**
+
+![Monthly sales performance](charts/chart_4.png)
+
+## Overview
+
+This project performs an in-depth SQL-based analysis of a product sales dataset using the Chinook relational database (Kaggle). The goal was to analyze transactional sales data stored across multiple related tables and extract meaningful business insights using structured SQL queries. By applying joins, aggregations, window functions, and business logic, the project demonstrates how raw relational data can be transformed into actionable insights for decision-making.
+
+## Objectives
 
 - Analyze product sales performance using SQL
 - Identify top-selling tracks and products
 - Calculate revenue per country and region
 - Evaluate monthly sales performance trends
 - Rank products using window functions
+- Demonstrate practical use of JOINs, aggregations (SUM, COUNT, AVG), GROUP BY/HAVING, and window functions (RANK, ROW_NUMBER)
 
-Demonstrate practical use of:
-- JOIN operations
-- Aggregations (SUM, COUNT, AVG)
-- GROUP BY and HAVING clauses
-- Window functions (RANK, ROW_NUMBER)
+## Dataset
 
-📂 Dataset
+**Chinook Database** (Kaggle) — simulates a digital music store with related tables including Customers, Invoices, Invoice Items, Tracks, Albums, Artists, Genres, and Employees.
 
-Dataset Used: Chinook Database (Kaggle)
+## Methodology
 
-The Chinook database simulates a digital music store and contains multiple related tables such as: Customers, Invoices, Invoice Items, Tracks, Albums, Artists, Genres, Employees etc.
+1. **Data Exploration** — load and review database schema, identify primary/foreign keys, understand table relationships
+2. **JOIN Operations** — combine Invoice + Invoice_Items, Tracks + Albums + Artists, Customers + Invoices
+3. **Aggregation & Business Metrics** — total revenue per product, revenue per country, monthly sales performance, purchases per customer
+4. **Window Functions & Ranking** — applied `ROW_NUMBER()` and `RANK()` for ranked product lists
 
-🛠 Tools and Libraries 
+## Key findings
 
-- Numpy, Matplotlib, Pandas
-- SQL (SQLite / PostgreSQL / MySQL / BigQuery)
-- Python (for executing SQL queries)
-- Relational Database Concepts
-- Window functions (RANK, ROW_NUMBER)
-- Aggregations & Grouping
+- Revenue is concentrated in a handful of top countries and top-selling tracks.
+- Monthly performance shows clear trend patterns useful for forecasting and seasonal planning.
+- Window-function rankings surface the top track per country/region, directly actionable for regional marketing.
 
-🔍 Methodology
-1. Data Exploration
-- load and review database schema
-- Identify primary and foreign keys
-- Understand table relationships
+These insights support inventory decisions, targeting high-value markets, focusing marketing on top performers, and strategic pricing.
 
-2. JOIN Operations: Combine tables such as:
-- Invoice + Invoice_Items
-- Tracks + Albums + Artists
-- Customers + Invoices
+## Contents
 
-3. Aggregation & Business Metrics : Key metrics calculated:
-- Total revenue per product
-- Revenue per country
-- Monthly sales performance
-- Number of purchases per customer
+```
+├── Product_sales _analysis using SQL.ipynb   # Full SQL analysis notebook
+├── Chinook_Sqlite.sqlite                     # Source relational database
+├── charts/                                   # Result chart images (shown above)
+└── README.md
+```
 
-4. Window Functions & Ranking : Applied advanced SQL features:
-- ROW_NUMBER()
-- RANK()
+## Tools
 
-📈 Key Outputs and business insights 
+- SQL (SQLite)
+- Python — executing SQL queries
+- Pandas, NumPy, Matplotlib — results handling and visualization
 
-- Top-selling tracks globally
-- Revenue distribution by country
-- Monthly revenue trends
-- Compare performance within regions
-- Ranked product lists using window functions
-- Top sales track per country
-
-These insights can help businesses in the follwing ways:
-- Optimize inventory decisions
-- Target high-value markets
-- Focus marketing on top-performing products
-- Improve strategic pricing decisions
-
-⭐ Future Improvements
+## Future improvements
 
 - Build interactive dashboards (Power BI / Tableau)
 - Automate reporting with Python
 - Extend analysis with customer segmentation
-- Implement advanced analytics using SQL + Machine Learning
+- Implement advanced analytics using SQL + machine learning
 - Optimize query performance for large-scale databases
