@@ -4,24 +4,6 @@
 
 An in-depth SQL analysis of the Chinook digital music store database, turning relational sales data into revenue, product, and regional performance insights using joins, aggregations, and window functions.
 
-## Results
-
-**Total sales by country**
-
-![Sales by country](charts/chart_1.png)
-
-**Top-selling tracks**
-
-![Top-selling tracks](charts/chart_2.png)
-
-**Revenue by region**
-
-![Revenue by region](charts/chart_3.png)
-
-**Monthly sales performance**
-
-![Monthly sales performance](charts/chart_4.png)
-
 ## Overview
 
 This project performs an in-depth SQL-based analysis of a product sales dataset using the Chinook relational database (Kaggle). The goal was to analyze transactional sales data stored across multiple related tables and extract meaningful business insights using structured SQL queries. By applying joins, aggregations, window functions, and business logic, the project demonstrates how raw relational data can be transformed into actionable insights for decision-making.
@@ -62,6 +44,24 @@ These insights support inventory decisions, targeting high-value markets, focusi
 ├── charts/                                   # Result chart images (shown above)
 └── README.md
 ```
+
+## Results
+
+**Total sales by country**
+
+![Sales by country](charts/chart_1.png)
+
+**Top-selling tracks**
+
+![Top-selling tracks](charts/chart_2.png)
+
+**Revenue by region**
+
+![Revenue by region](charts/chart_3.png)
+
+**Monthly sales performance**
+
+![Monthly sales performance](charts/chart_4.png)
 
 ## Tools
 
